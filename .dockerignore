@@ -1,0 +1,11 @@
+.git
+.gitignore
+**/node_modules
+**/build
+**/__pycache__
+**/*.pyc
+**/.env
+**/.env.*
+!**/.env.example
+test_reports
+memory

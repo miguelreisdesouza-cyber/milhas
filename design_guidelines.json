@@ -1,0 +1,119 @@
+{
+  "project_name": "AUREON",
+  "slogan": "patrimônio em milhas",
+  "theme": "light",
+  "typography": {
+    "headings_font": "Playfair Display",
+    "body_font": "Plus Jakarta Sans",
+    "label_font": "JetBrains Mono",
+    "hierarchy": {
+      "H1": "text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-petroleum font-serif",
+      "H2": "text-2xl sm:text-3xl lg:text-4xl font-normal tracking-tight text-petroleum font-serif",
+      "H3": "text-xl sm:text-2xl font-medium tracking-tight text-petroleum font-serif",
+      "H4": "text-lg sm:text-xl font-medium text-petroleum font-sans",
+      "Body": "text-base text-petroleum-muted font-sans leading-relaxed",
+      "Labels": "text-xs uppercase tracking-[0.2em] text-petroleum-muted font-mono"
+    },
+    "instructions": "DO NOT use Inter, Roboto, or generic sans for headings. Apply Playfair Display (serif) to inject 'Old Money Tech' elegance. Ensure tension by contrasting the classic serif headers with clean, geometric Plus Jakarta Sans for the body and data tables. Overlines and micro-labels should use JetBrains Mono uppercase."
+  },
+  "colors": {
+    "palette": {
+      "background_cream": "#F8F6F0",
+      "surface_white": "#FFFFFF",
+      "petroleum_primary": "#0A1F24",
+      "lime_action": "#C4F033",
+      "water_green_progress": "#00A389",
+      "gold_wealth": "#C5A059",
+      "text_muted": "#5C6F75",
+      "border_subtle": "rgba(10, 31, 36, 0.08)",
+      "petroleum_glass": "rgba(10, 31, 36, 0.6)"
+    },
+    "usage": {
+      "background": "Use background_cream globally. Do not use pure white for the app background.",
+      "cards": "Use surface_white with border_subtle. This creates a clean, auditable financial interface.",
+      "text": "Main text should be petroleum_primary. Secondary text text_muted.",
+      "buttons_cta": "Use petroleum_primary for primary buttons (with white text), and lime_action for high-energy highlights, badges, and 'Next Best Action' buttons. Ensure lime text is dark (petroleum_primary).",
+      "charts_and_progress": "Use water_green_progress for data visualizations, goal tracking bars, and wealth evolution lines. It evokes steady, calm growth.",
+      "travel_wealth_elements": "Use gold_wealth for luxury markers, VIP lounge tags, patrimony milestones, and premium travel icons."
+    }
+  },
+  "visual_enhancers": {
+    "borders_and_radius": {
+      "radius": "Generous rounded corners. Use rounded-2xl or rounded-3xl for major panels and cards. Buttons should be pill-shaped (rounded-full).",
+      "borders": "Always add a 1px border-subtle to cards to prevent them from floating aimlessly. Do not rely entirely on shadows."
+    },
+    "shadows": {
+      "ambient": "shadow-[0_8px_32px_rgba(10,31,36,0.04)] for elevated surfaces (like the AI copilot chat window)."
+    },
+    "surfaces": {
+      "glassmorphism": "For sticky headers or AI Copilot floating panels, use backdrop-blur-xl bg-white/70 with a delicate border-white/40. Ensure text underneath maintains contrast."
+    }
+  },
+  "components": {
+    "buttons": "Pill-shaped, smooth hover states. Primary: bg-petroleum text-white hover:-translate-y-0.5 shadow-md. Secondary/Action: bg-lime text-petroleum hover:bg-lime/90.",
+    "cards": "Use standard HTML/Tailwind divs for layout flexibility. bg-white rounded-3xl border border-[#0A1F24]/10 p-6 or p-8.",
+    "ai_copilot": "A specialized conversational UI. Can be a fixed right-sidebar or a floating widget. Needs a status indicator (pulsing water_green dot for 'online'). Contextual suggestions should be small pill buttons.",
+    "progress_bars": "Used in the Goals section. bg-petroleum/10 for the track, bg-water-green for the fill. Smooth width transitions.",
+    "my_cards": "Visual representation of physical credit cards. Use dark mode internal styles for the cards themselves (e.g., black cards with silver/gold typography) to contrast against the cream dashboard."
+  },
+  "grids_and_layouts": {
+    "spacing": "Generous. Use p-6, p-8, and p-12. Avoid cramped data. Empty space implies luxury.",
+    "dashboard_architecture": "F-Pattern Hierarchy. Top-left: Single North Star Metric (Total Wealth in BRL). Below it: 'Role-Metric-Density' widgets. Use an asymmetric grid: grid-cols-1 md:grid-cols-12. Main wealth chart spans col-span-8, side-feed (Opportunities/Expiry) spans col-span-4.",
+    "navigation": "Left sidebar or top nav. Must include logo (AUREON). Active states in nav should use a subtle gold_wealth indicator or bold serif treatment."
+  },
+  "motion": {
+    "transitions": "Use specific properties: transition: transform 0.3s ease, opacity 0.3s ease. DO NOT use transition-all.",
+    "entrance": "Staggered fade-up for list items (like the Opportunities feed and Integrations directory).",
+    "micro_interactions": "Subtle scale up on hover for 'My Cards'. Progress bars animate from 0 to target width on scroll into view."
+  },
+  "accessibility": {
+    "contrast": "Ensure petroleum text on cream background meets APCA/WCAG standards. Lime green buttons must use dark text (petroleum).",
+    "test_attributes": "All interactive elements MUST have data-testid attributes (e.g., data-testid='copilot-send-button', data-testid='goal-progress-bar').",
+    "focus_states": "focus:ring-2 focus:ring-petroleum focus:ring-offset-2 focus:ring-offset-cream."
+  },
+  "media_and_images": {
+    "instructions": "Use these curated images for empty states, travel goals, and card visualizers. Never use placeholders.",
+    "image_urls": {
+      "luxury_card": {
+        "url": "https://images.pexels.com/photos/13810195/pexels-photo-13810195.jpeg",
+        "description": "Dark luxury credit card for 'My Cards' premium visualizer."
+      },
+      "travel_lounge": {
+        "url": "https://images.pexels.com/photos/2612114/pexels-photo-2612114.jpeg",
+        "description": "Premium airport lounge for travel goals or VIP benefits section."
+      },
+      "exotic_resort_1": {
+        "url": "https://images.unsplash.com/photo-1549294413-26f195200c16",
+        "description": "Exotic resort pool, used as a thumbnail for travel goals (e.g., Maldives)."
+      },
+      "exotic_resort_2": {
+        "url": "https://images.unsplash.com/photo-1581859814481-bfd944e3122f",
+        "description": "Nipa hut on water, used for travel opportunities."
+      }
+    }
+  },
+  "libraries_and_packages": {
+    "icons": "lucide-react (use sophisticated, minimal icons, stroke-width 1.5)",
+    "charts": "recharts (Customize tooltips to use the cream/petroleum palette. Use water_green for lines/areas)",
+    "animations": "framer-motion (for staggered entrances and layout animations)"
+  },
+  "instructions_to_main_agent": [
+    "Use pure JavaScript/JSX (.js files). Do NOT use TypeScript (.tsx).",
+    "Do NOT build generic AI slop. Enforce the serif font for headings (Playfair Display) to ensure a sophisticated fintech brand identity.",
+    "Integrate the AI Copilot deeply into the UI, not just as a generic chat bubble. Give it contextual awareness prompts.",
+    "Ensure the 'Verde-lima' is used sparingly for primary actions/CTAs to make them pop against the deep petroleum blue and cream.",
+    "Do NOT use completely transparent backgrounds for overlapping content like dropdowns or sticky headers; use solid or blurred glass surfaces."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Create depth through layered design elements with z-index hierarchy and generous spacing (2-3x normal).",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) for floating elements.",
+    "You MUST NOT apply universal transitions (e.g., transition: all). Add transitions for specific properties excluding transforms.",
+    "You MUST NOT center align the app container. Do not add `.App { text-align: center; }`.",
+    "Always use modern button styles (pill-shaped) with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters (like 🤖🧠💭💡) for icons. Use Lucide icons.",
+    "Every interaction needs micro-animations - hover states, transitions, and entrance animations.",
+    "All interactive and key informational elements MUST include a data-testid attribute.",
+    "Shadcn components use .js extensions instead of .tsx where applicable."
+  ]
+}

@@ -1,0 +1,36 @@
+# Environment and credentials
+.env
+.env.*
+*.env
+!.env.example
+!**/.env.example
+*credentials*.json
+*token*.json
+*.pem
+*.key
+
+# Frontend
+**/node_modules/
+frontend/build/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Docker/local data
+mongo-data/
